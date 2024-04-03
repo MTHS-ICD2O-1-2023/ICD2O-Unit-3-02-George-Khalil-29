@@ -1,9 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <p>Paragraph</p>
-  </body>
-</html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Area and Perimeter of Rectangle, in JavaScript" />
+  <meta name="keywords" content="mths, ics2o" />
+  <meta name="author" content="George, Khalil" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <title>Volume of a Pyramid, with JS</title>
+</head>
+<body>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="./js/script.js"></script>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Volume of a Pyramid, with JS</span>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <div class="right-image">
+        <img src="./images/pyramid.png" alt="Image of Pyramid" />
+      </div>
+      <br />
+      <div class="page-content">Formula</div>
+       <br />
+       <div class="page-content">V = (L x W x H) / 3</div>
+       <br />
+       <div class="page-content">Please enter integers for dimensions:</div>
+       <br />
+      <!-- Numeric Textfield with Floating Label -->
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input 
+             class="mdl-textfield__input" 
+             type="number" 
+             pattern="-?[0-9]*(\.[0-9]+)?" 
+             id="length-number"
+             step="0.01"
+             />
+          <label class="mdl-textfield__label" for="length-number">Length here (mm)...</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+      </form>
+      <!-- Numeric Textfield with Floating Label -->
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="width-number" step="0.01" />
+          <label class="mdl-textfield__label" for="length-number">Width here (mm)...</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+      </form>
+      <!-- Numeric Textfield with Floating Label -->
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+          <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="height" step="0.01" />
+          <label class="mdl-textfield__label" for="length-number">Height here (mm)...</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+      </form>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculatePermeterAndAreaOfRectangle()">
+          Calculate
+        </button>
+        </form>
+        <br />
+        <div class="page-content-answer">
+          <div id="area"></div>
+          <div id="areaOfTriangle"></div>
+        </div>
+        </main>
+        </div>
+        </body>
+        </html>
