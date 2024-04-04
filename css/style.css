@@ -36,5 +36,11 @@ img {
 }
 
 body {
-  background-color: rgb(95 97 101);
+  background-color: rgb(101, 192, 225);
+}
+
+label {
+  display: inline-block;
+  width: 50px;
+  text-align: left;
 }

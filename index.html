@@ -29,53 +29,46 @@
         <img src="./images/pyramid.png" alt="Image of Pyramid" />
       </div>
       <br />
-      <div class="page-content">Formula</div>
-       <br />
-       <div class="page-content">V = (L x W x H) / 3</div>
-       <br />
-       <div class="page-content">Please enter integers for dimensions:</div>
-       <br />
-      <!-- Numeric Textfield with Floating Label -->
-      <form action="#">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input 
-             class="mdl-textfield__input" 
-             type="number" 
-             pattern="-?[0-9]*(\.[0-9]+)?" 
-             id="length-number"
-             step="0.01"
-             />
-          <label class="mdl-textfield__label" for="length-number">Length here (mm)...</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
+      <div class="page-content">Formulas</div>
+      <br />
+      <div class="page-content">V = (L x W x H) / 3</div>
+      <br />
+      <div class="page-content">Please enter integers for dimensions:</div>
+      <br />
+      <!--Textfield 1 -->
+      <div class="length">
+        <label>Length:</label>
+        <input type="number" step=".01" id="length-of-pyramid" placeholder="e.g. 15">
+        <label>mm</label>
+      </div>
+      <br />
+      <!--Textfield 2 -->
+      <div class="width">
+        <label>Width:</label>
+        <input type="number" step=".01" id="width-of-pyramid" placeholder="e.g. 15">
+        <label>mm</label>
+      </div>
+      <br />
+      <!--Textfield 3 -->
+      <div class="height">
+        <label>Height:</label>
+        <input type="number" step=".01" id="height-of-pyramid" placeholder="e.g. 15">
+        <label>mm</label>
+      </div>
+      <br />
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+        onclick="calculateVolumeOfPyramid()">
+        Calculate
+      </button>
+      <br />
       </form>
-      <!-- Numeric Textfield with Floating Label -->
-      <form action="#">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="width-number" step="0.01" />
-          <label class="mdl-textfield__label" for="length-number">Width here (mm)...</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </form>
-      <!-- Numeric Textfield with Floating Label -->
-      <form action="#">
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-          <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="height" step="0.01" />
-          <label class="mdl-textfield__label" for="length-number">Height here (mm)...</label>
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
-      </form>
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="calculatePermeterAndAreaOfRectangle()">
-          Calculate
-        </button>
-        </form>
-        <br />
-        <div class="page-content-answer">
-          <div id="area"></div>
-          <div id="areaOfTriangle"></div>
-        </div>
-        </main>
-        </div>
-        </body>
-        </html>
+      <br />
+      <div class="page-content-answer">
+        <div id="volume"></div>
+        <div id="volumeOfPayrmid"></div>
+        <div id="value"></div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
